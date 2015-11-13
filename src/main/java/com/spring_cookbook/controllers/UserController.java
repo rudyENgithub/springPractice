@@ -20,5 +20,12 @@ public class UserController {
                 usuario1.setAge(27);
 		userDAO.add(usuario1);
 	}
+        
+        @RequestMapping("buscarPorId")
+	public void buscarPorId() {
+		Users user = userDAO.findById(1L);
+		System.out.println(user.getFirstName());
+		System.out.println(user.getAge());
+	}
 
 }
